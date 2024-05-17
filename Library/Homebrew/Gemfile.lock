@@ -38,7 +38,7 @@ GEM
       parser
       rainbow (~> 3.0)
       sorbet-runtime (>= 0.5)
-    parser (3.3.0.5)
+    parser (3.3.1.0)
       ast (~> 2.4.1)
       racc
     patchelf (1.5.0)
@@ -54,8 +54,9 @@ GEM
     rbi (0.1.10)
       prism (>= 0.18.0, < 0.25)
       sorbet-runtime (>= 0.5.9204)
-    regexp_parser (2.9.0)
-    rexml (3.2.6)
+    regexp_parser (2.9.2)
+    rexml (3.2.8)
+      strscan (>= 3.0.9)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -77,7 +78,7 @@ GEM
     rspec-support (3.13.1)
     rspec_junit_formatter (0.6.0)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rubocop (1.62.1)
+    rubocop (1.63.5)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -88,8 +89,8 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.31.2)
-      parser (>= 3.3.0.4)
+    rubocop-ast (1.31.3)
+      parser (>= 3.3.1.0)
     rubocop-capybara (2.20.0)
       rubocop (~> 1.41)
     rubocop-factory_bot (2.25.1)
@@ -99,14 +100,14 @@ GEM
     rubocop-performance (1.21.0)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rspec (2.29.1)
+    rubocop-rspec (2.29.2)
       rubocop (~> 1.40)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
       rubocop-rspec_rails (~> 2.28)
-    rubocop-rspec_rails (2.28.2)
+    rubocop-rspec_rails (2.28.3)
       rubocop (~> 1.40)
-    rubocop-sorbet (0.8.0)
+    rubocop-sorbet (0.8.3)
       rubocop (>= 0.90.0)
     ruby-macho (4.0.1)
     ruby-prof (1.7.0)
@@ -137,6 +138,7 @@ GEM
       sorbet-static-and-runtime (>= 0.5.10187)
       thor (>= 0.19.2)
     stackprof (0.2.26)
+    strscan (3.1.0)
     tapioca (0.13.1)
       bundler (>= 2.2.25)
       netrc (>= 0.11.0)
@@ -177,18 +179,18 @@ DEPENDENCIES
   patchelf
   plist
   pry
-  rexml
+  rexml (>= 3.2.7)
   rspec
   rspec-github
   rspec-retry
   rspec-sorbet
   rspec_junit_formatter
-  rubocop
+  rubocop (>= 1.63.0)
   rubocop-ast
   rubocop-md
   rubocop-performance
-  rubocop-rspec
-  rubocop-sorbet
+  rubocop-rspec (>= 2.29.2)
+  rubocop-sorbet (>= 0.8.1)
   ruby-macho
   ruby-prof
   ruby-progressbar
@@ -205,4 +207,4 @@ RUBY VERSION
    ruby 3.1.4p223
 
 BUNDLED WITH
-   2.4.18
+   2.3.26
